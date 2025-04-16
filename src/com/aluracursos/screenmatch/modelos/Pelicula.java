@@ -1,7 +1,7 @@
-package com.ORACLE.screenmatch.modelos;
+package com.aluracursos.screenmatch.modelos;
 
-public class Pelicula extends Titulo{
-   private String director;
+public class Pelicula extends Titulo {
+    private String director;
 
     public String getDirector() {
         return director;

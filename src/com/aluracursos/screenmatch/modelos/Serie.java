@@ -1,14 +1,15 @@
-package com.ORACLE.screenmatch.modelos;
+package com.aluracursos.screenmatch.modelos;
 
-public class Serie extends Titulo{
-    private int temporadas;
-    private int episodiosPorTemporada;
-    private int minutosPorEpisodio;
+public class Serie extends Titulo {
+    int temporadas;
+    int episodiosPorTemporada;
+    int minutosPorEpisodio;
 
     @Override
-    public int getDuracionEnMinutos(){
-        return  temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    public int getDuracionEnMinutos() {
+        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
+
     public int getTemporadas() {
         return temporadas;
     }
@@ -32,4 +33,7 @@ public class Serie extends Titulo{
     public void setMinutosPorEpisodio(int minutosPorEpisodio) {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
+
+
+
 }

@@ -1,4 +1,4 @@
-package com.ORACLE.screenmatch.modelos;
+package com.aluracursos.screenmatch.modelos;
 
 public class Titulo {
     private String nombre;
@@ -6,11 +6,7 @@ public class Titulo {
     private int duracionEnMinutos;
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
-    private int cantidadDeEvaluaciones;
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    private int totalDelasEvaluaciones;
 
     public String getNombre() {
         return nombre;
@@ -28,6 +24,10 @@ public class Titulo {
         return incluidoEnElPlan;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
         this.fechaDeLanzamiento = fechaDeLanzamiento;
     }
@@ -40,19 +40,22 @@ public class Titulo {
         this.incluidoEnElPlan = incluidoEnElPlan;
     }
 
-    public int getCantidadDeEvaluaciones(){
-        return cantidadDeEvaluaciones;
+    public int getTotalDelasEvaluaciones(){
+        return totalDelasEvaluaciones;
     }
+
     public void muestraFichaTecnica(){
-        System.out.println("El nombre de la com.ORACLE.screenmatch.modelos.Pelicula es: "+ nombre);
-        System.out.println("Su fecha de lanzamiento fue: " + fechaDeLanzamiento);
-        System.out.println("Duracion en minutos: " + getDuracionEnMinutos());
+        System.out.println("El nombre de la película es: " + nombre);
+        System.out.println("Su fecha de lanzamiento es: " + fechaDeLanzamiento);
+        System.out.println("Duración en minutos: "+ getDuracionEnMinutos());
     }
+
     public void evalua(double nota){
         sumaDeLasEvaluaciones += nota;
-        cantidadDeEvaluaciones ++;
+        totalDelasEvaluaciones++;
     }
+
     public double calculaMedia(){
-        return sumaDeLasEvaluaciones / cantidadDeEvaluaciones;
+        return sumaDeLasEvaluaciones / totalDelasEvaluaciones;
     }
 }
