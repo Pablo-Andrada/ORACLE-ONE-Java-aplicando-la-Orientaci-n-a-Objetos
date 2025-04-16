@@ -46,7 +46,7 @@ public class Titulo {
     public void muestraFichaTecnica(){
         System.out.println("El nombre de la com.ORACLE.screenmatch.modelos.Pelicula es: "+ nombre);
         System.out.println("Su fecha de lanzamiento fue: " + fechaDeLanzamiento);
-        System.out.println("Duracion en minutos: " + duracionEnMinutos);
+        System.out.println("Duracion en minutos: " + getDuracionEnMinutos());
     }
     public void evalua(double nota){
         sumaDeLasEvaluaciones += nota;
